@@ -1,0 +1,154 @@
+:root {
+  color-scheme: dark;
+  --bg: #000;
+  --fg: #fff;
+  --muted: #8a8a8a;
+  --line: #2a2a2a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+html:not([lang="en"]) [lang="en"] {
+  display: none;
+}
+
+html[lang="en"] [lang="fr"] {
+  display: none;
+}
+
+.lang {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  gap: 0.85rem;
+  z-index: 1;
+}
+
+.lang button {
+  padding: 0.35rem 0.1rem;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+html[lang="fr"] .lang [data-lang="fr"],
+html[lang="en"] .lang [data-lang="en"] {
+  color: var(--fg);
+}
+
+.lang button:hover {
+  color: var(--fg);
+}
+
+.lang button:focus-visible {
+  outline: 1px solid var(--fg);
+  outline-offset: 3px;
+}
+
+.sheet {
+  width: min(100% - 3rem, 34rem);
+  margin: auto;
+  padding: 4.75rem 0 4rem;
+}
+
+main {
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 2.75rem;
+}
+
+h1 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lede {
+  margin: 0 0 3.25rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.fund p {
+  margin: 0 0 0.9rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.fund ul {
+  margin: 0 0 3.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.fund li {
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--line);
+  line-height: 1.35;
+}
+
+.fund li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.act {
+  margin: 0;
+  max-width: 32rem;
+}
+
+.pieces:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.35rem;
+  margin-top: 3.5rem;
+}
+
+.pieces img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+@media (max-width: 40rem) {
+  .lede {
+    font-size: 1.3rem;
+  }
+}

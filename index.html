@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MNTRL</title>
+  <meta name="description" content="Portée par le collectif. Les ventes financent le civisme, la formation gratuite aux nouvelles technologies et la défense de notre espace démocratique.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("mntrl-lang"); } catch (e) {}
+      var lang = saved;
+      if (lang !== "fr" && lang !== "en") {
+        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "fr";
+        lang = String(nav).toLowerCase().indexOf("en") === 0 ? "en" : "fr";
+      }
+      document.documentElement.lang = lang;
+    })();
+  </script>
+</head>
+<body>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="fr">FR</button>
+    <button type="button" data-lang="en">EN</button>
+  </div>
+
+  <div class="sheet">
+    <main>
+      <h1>
+        <img src="logo.svg" alt="MNTRL">
+      </h1>
+
+      <p class="lede">
+        <span lang="fr">Portée par le collectif.</span>
+        <span lang="en">Worn by the collective.</span>
+      </p>
+
+      <section class="fund" aria-labelledby="fund-label">
+        <p id="fund-label">
+          <span lang="fr">Les ventes financent</span>
+          <span lang="en">Sales fund</span>
+        </p>
+        <ul>
+          <li>
+            <span lang="fr">Le civisme</span>
+            <span lang="en">Civic spirit</span>
+          </li>
+          <li>
+            <span lang="fr">La formation gratuite aux nouvelles technologies</span>
+            <span lang="en">Free training in new technologies</span>
+          </li>
+          <li>
+            <span lang="fr">La défense de notre espace démocratique</span>
+            <span lang="en">Defense of our democratic space</span>
+          </li>
+        </ul>
+      </section>
+
+      <p class="act">
+        <span lang="fr">Chaque vêtement porté est un acte&#8239;: il affiche une appartenance et il finance des actions concrètes.</span>
+        <span lang="en">Every garment worn is an act: it shows affiliation, and it funds concrete actions.</span>
+      </p>
+    </main>
+
+    <!-- Add product photos here, then remove the hidden attribute.
+         <img src="photos/01.jpg" alt=""> -->
+    <section class="pieces" hidden></section>
+  </div>
+
+  <script src="lang.js"></script>
+</body>
+</html>
