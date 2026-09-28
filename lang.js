@@ -1,7 +1,7 @@
 (function () {
   var descriptions = {
-    fr: "Portée par le collectif. Les ventes financent le civisme, la formation gratuite aux nouvelles technologies et la défense de notre espace démocratique.",
-    en: "Worn by the collective. Sales fund civic spirit, free training in new technologies, and the defense of our democratic space."
+    fr: "Portée par le collectif. Les ventes financent le civisme, la formation aux nouvelles technologies et la défense de notre espace démocratique.",
+    en: "Worn by the collective. Sales fund civic spirit, training in new technologies, and the defense of our democratic space."
   };
 
   var buttons = document.querySelectorAll(".lang button");
