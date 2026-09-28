@@ -6,6 +6,8 @@
 
   var buttons = document.querySelectorAll(".lang button");
   var meta = document.querySelector('meta[name="description"]');
+  var year = document.querySelector("[data-year]");
+  if (year) year.textContent = String(new Date().getFullYear());
 
   function apply(lang) {
     document.documentElement.lang = lang;

@@ -79,7 +79,7 @@ html[lang="en"] .lang [data-lang="en"] {
 .sheet {
   width: min(100% - 3rem, 34rem);
   margin: auto;
-  padding: 4.75rem 0 4rem;
+  padding: 4.75rem 0 3rem;
 }
 
 main {
@@ -140,6 +140,55 @@ h1 img {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
+}
+
+footer {
+  width: min(100% - 3rem, 34rem);
+  margin: 0 auto;
+  padding: 0 0 1.75rem;
+}
+
+.colophon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.65rem 1.5rem;
+  margin: 0;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
+}
+
+.colophon p {
+  margin: 0;
+}
+
+.social {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social a {
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.social a:hover {
+  color: var(--fg);
+}
+
+.social a:focus-visible {
+  outline: 1px solid var(--fg);
+  outline-offset: 3px;
+}
+
+.legal {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.75rem;
 }
 
 @media (max-width: 40rem) {
