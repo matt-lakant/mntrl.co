@@ -97,35 +97,11 @@ h1 img {
 }
 
 .lede {
-  margin: 0 0 3.25rem;
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: -0.015em;
-}
-
-.fund p {
-  margin: 0 0 0.9rem;
-  color: var(--muted);
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.fund ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.fund li {
-  padding: 0.7rem 0;
-  border-top: 1px solid var(--line);
-  line-height: 1.35;
-}
-
-.fund li:last-child {
-  border-bottom: 1px solid var(--line);
 }
 
 .pieces:not([hidden]) {
@@ -148,24 +124,11 @@ footer {
   padding: 0 0 1.75rem;
 }
 
-.colophon {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.65rem 1.5rem;
-  margin: 0;
-  padding-top: 1.15rem;
-  border-top: 1px solid var(--line);
-}
-
-.colophon p {
-  margin: 0;
-}
-
 .social {
   display: flex;
   gap: 1.25rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line);
 }
 
 .social a {
