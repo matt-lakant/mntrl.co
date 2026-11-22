@@ -1,7 +1,7 @@
 (function () {
   var descriptions = {
-    fr: "Portée par le collectif.",
-    en: "Worn by the collective."
+    fr: "MNTRL, association loi 1901\u00a0: formations aux nouvelles technologies, actions de civisme et d'entraide, accès à une information fiable.",
+    en: "MNTRL, a 1901-law association: training in new technologies, civic and mutual-aid actions, access to reliable information."
   };
 
   var buttons = document.querySelectorAll(".lang button");
