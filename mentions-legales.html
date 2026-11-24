@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-fr="Mentions légales" data-en="Legal notice">Mentions légales</title>
+  <meta name="description" content="Mentions légales du site mntrl.co.">
+  <meta property="og:title" content="Mentions légales">
+  <meta property="og:description" content="Mentions légales du site mntrl.co.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mntrl.co/mentions-legales.html">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("mntrl-lang"); } catch (e) {}
+      var lang = saved;
+      if (lang !== "fr" && lang !== "en") {
+        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "fr";
+        lang = String(nav).toLowerCase().indexOf("en") === 0 ? "en" : "fr";
+      }
+      document.documentElement.lang = lang;
+      var title = document.querySelector("title");
+      if (title) {
+        var text = title.getAttribute("data-" + lang);
+        if (text) document.title = text;
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header class="top">
+    <nav class="menu">
+      <a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+      <a href="actions.html"><span lang="fr">Actions</span><span lang="en">Actions</span></a>
+      <a href="association.html"><span lang="fr">L'association</span><span lang="en">The association</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <div class="sheet">
+    <main class="prose">
+      <h1>
+        <span lang="fr">Mentions légales</span>
+        <span lang="en">Legal notice</span>
+      </h1>
+      <p>
+        <span lang="fr">Éditeur&nbsp;: MNTRL, association loi 1901, RNA W931032523, 10 rue du Sergent Bobillot, 93100 Montreuil. Contact&nbsp;: <a href="mailto:contact@mntrl.co">contact@mntrl.co</a>.</span>
+        <span lang="en">Publisher: MNTRL, nonprofit association (French law of 1901), RNA W931032523, 10 rue du Sergent Bobillot, 93100 Montreuil, France. Contact: <a href="mailto:contact@mntrl.co">contact@mntrl.co</a>.</span>
+      </p>
+      <p>
+        <span lang="fr">Directeur de la publication&nbsp;: Matthieu Cornet, président.</span>
+        <span lang="en">Publication director: Matthieu Cornet, president.</span>
+      </p>
+      <p>
+        <span lang="fr">Hébergeur&nbsp;: GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Téléphone&nbsp;: +1 877 448 4820. <a href="https://pages.github.com">https://pages.github.com</a></span>
+        <span lang="en">Host: GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Phone: +1 877 448 4820. <a href="https://pages.github.com">https://pages.github.com</a></span>
+      </p>
+      <p>
+        <span lang="fr">Ce site ne dépose aucun cookie et ne collecte aucune donnée personnelle.</span>
+        <span lang="en">This site sets no cookies and collects no personal data.</span>
+      </p>
+    </main>
+  </div>
+
+  <footer>
+    <nav class="social">
+      <a href="https://www.tiktok.com/@mntrl.co" rel="noopener noreferrer" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/mntrl.co/" rel="noopener noreferrer" target="_blank">Instagram</a>
+      <a href="https://x.com/mntrl_co" rel="noopener noreferrer" target="_blank">X</a>
+    </nav>
+    <p class="fineprint"><a href="mentions-legales.html" aria-current="page"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a></p>
+    <p class="legal">© <span data-year></span> MNTRL. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></p>
+    <p class="notice">MNTRL, association loi 1901, RNA W931032523, 10 rue du Sergent Bobillot, 93100 Montreuil<br><a href="mailto:contact@mntrl.co">contact@mntrl.co</a></p>
+  </footer>
+
+  <script src="lang.js"></script>
+</body>
+</html>

@@ -11,7 +11,14 @@
 
   function apply(lang) {
     document.documentElement.lang = lang;
-    if (meta) meta.setAttribute("content", descriptions[lang]);
+    var title = document.querySelector("title");
+    if (title) {
+      var text = title.getAttribute("data-" + lang);
+      if (text) document.title = text;
+    }
+    var path = location.pathname;
+    var isHome = path === "/" || /\/index\.html$/.test(path);
+    if (meta && isHome && descriptions[lang]) meta.setAttribute("content", descriptions[lang]);
     buttons.forEach(function (button) {
       var on = button.getAttribute("data-lang") === lang;
       button.setAttribute("aria-pressed", on ? "true" : "false");

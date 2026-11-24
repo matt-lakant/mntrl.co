@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-fr="Actions" data-en="Actions">Actions</title>
+  <meta name="description" content="Les actions de MNTRL&nbsp;: formations aux nouvelles technologies, civisme et entraide, accès à une information fiable.">
+  <meta property="og:title" content="Actions">
+  <meta property="og:description" content="Les actions de MNTRL&nbsp;: formations aux nouvelles technologies, civisme et entraide, accès à une information fiable.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mntrl.co/actions.html">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("mntrl-lang"); } catch (e) {}
+      var lang = saved;
+      if (lang !== "fr" && lang !== "en") {
+        var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "fr";
+        lang = String(nav).toLowerCase().indexOf("en") === 0 ? "en" : "fr";
+      }
+      document.documentElement.lang = lang;
+      var title = document.querySelector("title");
+      if (title) {
+        var text = title.getAttribute("data-" + lang);
+        if (text) document.title = text;
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header class="top">
+    <nav class="menu">
+      <a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+      <a href="actions.html" aria-current="page"><span lang="fr">Actions</span><span lang="en">Actions</span></a>
+      <a href="association.html"><span lang="fr">L'association</span><span lang="en">The association</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <div class="sheet">
+    <main class="prose">
+      <h1>
+        <span lang="fr">Actions</span>
+        <span lang="en">Actions</span>
+      </h1>
+
+      <section>
+        <h2>
+          <span lang="fr">Formations aux nouvelles technologies</span>
+          <span lang="en">Training in new technologies</span>
+        </h2>
+        <p>
+          <span lang="fr">MNTRL forme des jeunes de 16 à 25 ans à l'intelligence artificielle, à la cybersécurité et à la fabrication numérique. Les formations sont gratuites ou à prix réduit selon les revenus. Première formation prévue&nbsp;: créer un site Internet avec l'aide de l'IA. Chaque participant repart avec un site en ligne qu'il a construit.</span>
+          <span lang="en">MNTRL trains young people aged 16 to 25 in artificial intelligence, cybersecurity and digital fabrication. Training is free or at a reduced price depending on income. First training planned: building a website with the help of AI. Each participant leaves with a live website they built.</span>
+        </p>
+      </section>
+
+      <section>
+        <h2>
+          <span lang="fr">Civisme et entraide</span>
+          <span lang="en">Civic action and mutual aid</span>
+        </h2>
+        <p>
+          <span lang="fr">MNTRL organise des actions de quartier&nbsp;: nettoyages, réemploi de vêtements, entraide entre habitants. Les actions sont choisies et organisées avec les jeunes qui y participent.</span>
+          <span lang="en">MNTRL organizes neighborhood actions: cleanups, clothing reuse, mutual aid between residents. The actions are chosen and organized with the young people who take part.</span>
+        </p>
+      </section>
+
+      <section>
+        <h2>
+          <span lang="fr">Accès à une information fiable</span>
+          <span lang="en">Access to reliable information</span>
+        </h2>
+        <p>
+          <span lang="fr">MNTRL anime des ateliers pour apprendre à vérifier une information et à reconnaître une campagne de désinformation.</span>
+          <span lang="en">MNTRL runs workshops on how to check a piece of information and how to recognize a disinformation campaign.</span>
+        </p>
+      </section>
+
+      <section>
+        <h2>
+          <span lang="fr">Où en est l'association</span>
+          <span lang="en">Where the association stands</span>
+        </h2>
+        <p>
+          <span lang="fr">MNTRL a été créée en novembre 2026. Les premières actions sont prévues début 2027. L'association publiera chaque année le nombre de personnes formées, les actions menées et l'usage de ses recettes.</span>
+          <span lang="en">MNTRL was created in November 2026. The first actions are planned for early 2027. Each year the association will publish the number of people trained, the actions carried out and how its income was used.</span>
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <nav class="social">
+      <a href="https://www.tiktok.com/@mntrl.co" rel="noopener noreferrer" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/mntrl.co/" rel="noopener noreferrer" target="_blank">Instagram</a>
+      <a href="https://x.com/mntrl_co" rel="noopener noreferrer" target="_blank">X</a>
+    </nav>
+    <p class="fineprint"><a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a></p>
+    <p class="legal">© <span data-year></span> MNTRL. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></p>
+    <p class="notice">MNTRL, association loi 1901, RNA W931032523, 10 rue du Sergent Bobillot, 93100 Montreuil<br><a href="mailto:contact@mntrl.co">contact@mntrl.co</a></p>
+  </footer>
+
+  <script src="lang.js"></script>
+</body>
+</html>

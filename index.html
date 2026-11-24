@@ -22,14 +22,26 @@
         lang = String(nav).toLowerCase().indexOf("en") === 0 ? "en" : "fr";
       }
       document.documentElement.lang = lang;
+      var title = document.querySelector("title");
+      if (title) {
+        var text = title.getAttribute("data-" + lang);
+        if (text) document.title = text;
+      }
     })();
   </script>
 </head>
 <body>
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" data-lang="fr">FR</button>
-    <button type="button" data-lang="en">EN</button>
-  </div>
+  <header class="top">
+    <nav class="menu">
+      <a href="index.html" aria-current="page"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+      <a href="actions.html"><span lang="fr">Actions</span><span lang="en">Actions</span></a>
+      <a href="association.html"><span lang="fr">L'association</span><span lang="en">The association</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
 
   <div class="sheet">
     <main>
@@ -46,6 +58,7 @@
         <span lang="fr">MNTRL forme des jeunes aux nouvelles technologies. L'association mène des actions de civisme et d'entraide et agit pour l'accès à une information fiable.</span>
         <span lang="en">MNTRL trains young people in new technologies. The association runs civic and mutual-aid actions and works for access to reliable information.</span>
       </p>
+      <p class="more"><a href="actions.html"><span lang="fr">Voir nos actions</span><span lang="en">See our actions</span></a></p>
     </main>
 
     <!-- Product photos go in section.pieces. Remove its hidden attribute when the first image is added. -->
@@ -58,6 +71,7 @@
       <a href="https://www.instagram.com/mntrl.co/" rel="noopener noreferrer" target="_blank">Instagram</a>
       <a href="https://x.com/mntrl_co" rel="noopener noreferrer" target="_blank">X</a>
     </nav>
+    <p class="fineprint"><a href="mentions-legales.html"><span lang="fr">Mentions légales</span><span lang="en">Legal notice</span></a></p>
     <p class="legal">© <span data-year></span> MNTRL. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></p>
     <p class="notice">MNTRL, association loi 1901, RNA W931032523, 10 rue du Sergent Bobillot, 93100 Montreuil<br><a href="mailto:contact@mntrl.co">contact@mntrl.co</a></p>
   </footer>
